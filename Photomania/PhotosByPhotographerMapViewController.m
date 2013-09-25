@@ -8,7 +8,7 @@
 
 #import "PhotosByPhotographerMapViewController.h"
 #import "Photo+MKAnnotation.h"
-
+#import "PhotoViewController.h"
 
 @implementation PhotosByPhotographerMapViewController
 

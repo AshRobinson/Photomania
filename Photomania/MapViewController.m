@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "Photo+MKAnnotation.h"
 
 @interface MapViewController ()
 
@@ -52,7 +53,7 @@
     if ([view.leftCalloutAccessoryView isKindOfClass:[UIImageView class]]) {
         UIImageView *imageView = (UIImageView *)(view.leftCalloutAccessoryView);
         if ([view.annotation respondsToSelector:thumbnailMethod])
-            imageView.image = [view.annotation performSelector:thumbnailMethod];
+            imageView.image = [view.annotation performSelector:@selector(thumbnail)];
     }
 }
 

@@ -9,6 +9,7 @@
 #import "PhotographerMapViewController.h"
 #import <CoreData/CoreData.h>
 #import "Photographer+MKAnnotation.h"
+#import "PhotosByPhotographerMapViewController.h"
 
 @interface PhotographerMapViewController ()
 

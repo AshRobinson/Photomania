@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrO-py-gxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="-192"/>
+            <point key="canvasLocation" x="-129" y="-64"/>
         </scene>
         <!--Photos By Photographer Map View Controller-->
         <scene sceneID="9QV-yX-xd8">
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k12-6e-4Le" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="-192"/>
+            <point key="canvasLocation" x="762" y="-64"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="bkF-8P-2P7">
@@ -90,13 +90,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Arj-ws-bfJ">
+                                <rect key="frame" x="457" y="93" width="269" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="edO-Pw-4vC"/>
+                                    <constraint firstAttribute="width" constant="269" id="tRH-W0-pqo"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="sUq-Ze-Utp" kind="embed" identifier="Embed Map of Photo" id="d5D-2u-cc2"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iel-I1-COn" firstAttribute="leading" secondItem="vKJ-s5-c5g" secondAttribute="leading" id="2uK-7U-Vxv"/>
-                            <constraint firstAttribute="trailing" secondItem="iel-I1-COn" secondAttribute="trailing" id="dfq-wt-hAL"/>
-                            <constraint firstAttribute="bottom" secondItem="iel-I1-COn" secondAttribute="bottom" id="dj4-WK-Voa"/>
-                            <constraint firstItem="iel-I1-COn" firstAttribute="top" secondItem="vKJ-s5-c5g" secondAttribute="top" id="fWk-KO-kiP"/>
+                            <constraint firstItem="iel-I1-COn" firstAttribute="top" secondItem="vKJ-s5-c5g" secondAttribute="top" id="MaD-z9-CV3"/>
+                            <constraint firstAttribute="trailing" secondItem="iel-I1-COn" secondAttribute="trailing" id="TVc-4P-fDG"/>
+                            <constraint firstItem="Arj-ws-bfJ" firstAttribute="top" secondItem="zHF-1D-fY4" secondAttribute="bottom" constant="29" id="jE5-XT-t5J"/>
+                            <constraint firstAttribute="bottom" secondItem="iel-I1-COn" secondAttribute="bottom" id="l1j-Ai-Px8"/>
+                            <constraint firstAttribute="trailing" secondItem="Arj-ws-bfJ" secondAttribute="trailing" constant="42" id="orA-25-7GI"/>
+                            <constraint firstItem="iel-I1-COn" firstAttribute="leading" secondItem="vKJ-s5-c5g" secondAttribute="leading" id="uP2-Jd-oJK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RaA-gx-4Q1"/>
@@ -106,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBI-oS-EIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="-192"/>
+            <point key="canvasLocation" x="1617" y="-59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cuo-2l-4r3">
@@ -124,7 +138,35 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIJ-Vg-k20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="-192"/>
+            <point key="canvasLocation" x="-1031" y="-64"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="43F-tN-YAV">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="sUq-Ze-Utp" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XTb-Ju-L9R"/>
+                        <viewControllerLayoutGuide type="bottom" id="ikS-Wf-DBg"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8Yw-Er-pJK">
+                        <rect key="frame" x="0.0" y="0.0" width="269" height="248"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="REk-I4-bFW">
+                                <rect key="frame" x="0.0" y="0.0" width="269" height="248"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="mapView" destination="REk-I4-bFW" id="Umu-PO-otL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fb-PD-mfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2585" y="-121"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
